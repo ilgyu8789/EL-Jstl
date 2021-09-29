@@ -17,13 +17,20 @@ public class Servlet04 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		//	Request Scope
 		UserVo userVo = new UserVo(1, "박명수", "park", "1234", "male");
 		request.setAttribute("userVo", userVo);
-		
 		
 		request.setAttribute("num", 1);
 		request.setAttribute("str", "안녕하세요");
 		
+		//	Session Scope
+		UserVo userVoSess = new UserVo(2, "홍길동", "hong", "1234", "male");
+		request.getSession(true).setAttribute("userVoSess", userVoSess);
+		
+		//	Application Scope
+		UserVo userVoApp = new UserVo(3, "장길산", "jang", "9876", "male");
+		request.getServletContext().setAttribute("userVoApp", userVoApp);
 		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/04.jsp");

@@ -28,7 +28,24 @@
 	
 	
 	
-	<h2>el</h2>                 
+	<h2>el</h2>             
+	
+	<h3>Scope Test 1</h3>
+	<ul>
+		<!-- 객체의 키가 겹치면 명시적으로 스코프를 지정해 주는 것을 추천 -->
+		<li>Request Scope: ${requestScope.userVo.name }</li>
+		<li>Session Scope: ${sessionScope.userVoSess.name }</li>
+		<li>Application Scope: ${applicationScope.userVoApp.name }</li>
+	</ul>    
+	
+	<h3>Scope Test 2</h3>
+	<ul>
+		<!-- 각 스코프에 있는 객체의 키가 겹치지 않으면 스코프 생략 가능 -->
+		<li>Request Scope: ${userVo.name }</li>
+		<li>Session Scope: ${userVoSess.name }</li>
+		<li>Application Scope: ${userVoApp.name }</li>
+		
+	</ul>
 
 
 	

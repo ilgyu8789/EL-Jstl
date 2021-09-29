@@ -29,6 +29,17 @@
 		
 	<h2>el parameter값 꺼내쓰기</h2>
 	
+	<%-- 
+	EL은 ${param.파라미터명}으로 불러올 수 있고
+	필요할 시 자동으로 타입 캐스팅이 발생 --%>
+	<ul>
+		<li>id: ${param.id }</li>
+		<li>pw: ${param.pw }</li>
+		<li>name: ${param.name }</li>
+		<li>num1: ${param.num1 }</li>
+		<li>num2: ${param.num2 }</li>
+		<li>num1 + num2: ${param.num1 + param.num2 }</li>
+	</ul>
 
 
 
